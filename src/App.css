@@ -46,3 +46,56 @@ h1 {
   font-size: 1.125rem;
   line-height: 2.2;
 }
+
+.about-container {
+  background-color: #fff;
+  width: 100%; 
+  margin: 3rem 2rem;
+}
+
+h2 {
+  color: #005477;
+  font-family: 'Mulish', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 3rem; 
+  text-align: center;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: [port-start] minmax(12em, 4fr) [text-start] minmax(6em, 1fr) [img-end] 1fr [text-end] 1fr [port-end];
+}
+
+.about-img {
+  border-radius: 50%;
+  width: 100%;
+  grid-column: port-start / img-end;
+  grid-row: 1 / 2;
+}
+
+h3 {
+  color: #005477;
+  font-family: 'Mulish', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 600;
+  grid-column: text-start / text-end;
+  grid-row: 1 / 2;
+  align-self: center;
+}
+
+.about-body {
+  grid-column: port-start / port-end;
+}
+
+.about-frameworks {
+  grid-column: port-start / port-end;
+}
+
+.about-framework-list {
+  grid-column: port-start / port-end;
+}
+
+.resume-button {
+  grid-column: port-start / port-end;
+}
