@@ -155,7 +155,7 @@ h4 {
 .project-container {
   background-color: #005477;
   color: #fff;
-  padding: 2em 1em;
+  padding: 2em 1.5em;
 }
 
 .project-text {
@@ -165,7 +165,23 @@ h4 {
   margin-bottom: 1rem;
 }
 
+.bottom-project-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-tech {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
 .project-img {
   width: 100%;
   opacity: 0.6;
+}
+
+.project-img:hover, .project-img:focus {
+  opacity: 1;
 }
