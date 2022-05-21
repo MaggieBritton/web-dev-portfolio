@@ -8,6 +8,8 @@
   padding: 0;
 }
 
+/* Hero Styles */
+
 .hero-container {
   position: relative;
   height: 100vh;
@@ -51,9 +53,12 @@ h1 {
   line-height: 2.2;
 }
 
+/* About Styles */
+
 .about-container {
   background-color: #fff;
   width: 100%; 
+  margin: 4em 0;
 }
 
 h2 {
@@ -61,7 +66,7 @@ h2 {
   font-family: 'Mulish', sans-serif;
   font-size: 3rem;
   font-weight: 800;
-  margin: 4rem 0; 
+  margin-bottom: 2rem; 
   text-align: center;
 }
 
@@ -81,7 +86,7 @@ h2 {
 h3 {
   color: #005477;
   font-family: 'Mulish', sans-serif;
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   font-weight: 700;
   grid-column: text-start / screen-end;
   grid-row: 1 / 2;
@@ -130,4 +135,37 @@ h3 {
 
 .resume-button:hover {
   background: #000;
+}
+
+/* Projects Styles */
+
+.projects-container {
+  background-color: #f2f2f2;
+  padding: 4em 0;
+  width: 100%; 
+}
+
+h4 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.project-container {
+  background-color: #005477;
+  color: #fff;
+  padding: 2em 1em;
+}
+
+.project-text {
+  font-family: 'Mulish', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.project-img {
+  width: 100%;
+  opacity: 0.6;
 }
