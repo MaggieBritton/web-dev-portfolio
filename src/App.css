@@ -130,7 +130,6 @@ h3 {
   font-size: 1rem;
   margin: auto;
   padding: 1em 2em;
-  
 }
 
 .resume-button:hover {
@@ -185,6 +184,85 @@ h4 {
 .project-img:hover, .project-img:focus {
   opacity: 1;
 }
+
+/* Contact Styles */
+
+.contact-container {
+  margin: 4em 2em;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: [form-start] 1fr [form-middle] 1fr [form-end];
+  gap: 2em 1em;
+  margin-bottom: 2em;
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+  padding-bottom: 0.5em;
+}
+
+.field {
+  background-color: #f2f2f2;
+  border: 0.5px solid #e5e5e5;
+  display: block;
+  font-family: 'Mulish', sans-serif;
+  font-size: 1rem;
+  padding: 0.75em;
+  width: 100%;
+}
+
+.error {
+  font-size: 0.75rem;
+  color: #a60022;
+  padding-top: 5px;
+}
+
+.form-firstName {
+  grid-column: form-start / form-middle;
+}
+
+.form-lastName {
+  grid-column: form-middle / form-end;
+}
+
+.form-email {
+  grid-column: form-start / form-end;
+}
+
+.form-message {
+  grid-column: form-start / form-end;
+}
+
+.form-button {
+  grid-column: form-middle / form-end;
+  display: flex;
+  justify-content: right;
+}
+
+.form-send-button {
+  background-color: #005477;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Mulish', sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  padding: 1em 2em;
+}
+
+.form-send-button:hover {
+  background: #000;
+}
+
+.contact-text {
+  line-height: 1.6;
+  margin-bottom: 2em;
+}
+
 
 /* Footer Styles */
 

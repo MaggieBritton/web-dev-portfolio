@@ -30,30 +30,40 @@ const ContactForm = () => {
                 resetForm({ values: '' });
             }}
         >
-            <Form>
-
-                <label htmlFor="firstName">First Name</label>
-                <Field name="firstName" type="text" placeholder="First Name" />  
-                <ErrorMessage name="firstName" >
-                        {msg => <div>{msg}</div>}
-                </ErrorMessage>
-
-                <label htmlFor="lastName">Last Name</label>
-                <Field name="lastName" type="text" placeholder="Last Name" />
-                <ErrorMessage name="lastName" >
-                    {msg => <div>{msg}</div>}
-                </ErrorMessage>
-
-                <label htmlFor="email">Email</label>
-                <Field name="email" type="email" placeholder="name@email.com" />
-                <ErrorMessage name="email" >
-                    {msg => <div>{msg}</div>}
-                </ErrorMessage>
-
-                <label htmlFor="message">Message</label>
-                <Field as="textarea" name="message" rows="10" />
-
-                <button type="button">Send</button>
+            <Form className="contact-form">
+                <div className="form-firstName">
+                    <label htmlFor="firstName">First Name</label>
+                    <Field className="field" name="firstName" id="firstName" type="text" placeholder="First Name" />  
+                    <ErrorMessage name="firstName">
+                    {msg => <div className="error">{msg}</div>}
+                    </ErrorMessage> 
+                </div>
+                
+                <div className="form-lastName">
+                    <label htmlFor="lastName">Last Name</label>
+                    <Field className="field" name="lastName" id="lastName" type="text" placeholder="Last Name" />
+                    <ErrorMessage name="lastName" >
+                    {msg => <div className="error">{msg}</div>}
+                    </ErrorMessage> 
+                </div>
+                
+                <div className="form-email">
+                    <label htmlFor="email">Email</label>
+                    <Field className="field" name="email" id="email" type="email" placeholder="name@email.com" />
+                    <ErrorMessage name="email" >
+                    {msg => <div className="error">{msg}</div>}
+                    </ErrorMessage> 
+                </div>
+                
+                <div className="form-message">
+                    <label htmlFor="message">Message</label>
+                    <Field className="field" as="textarea" name="message" id="message" rows="10" />    
+                </div>
+               
+                <div className="form-button">
+                    <button className="form-send-button"type="button">Send</button> 
+                </div>
+                
 
             </Form>
         </Formik>
@@ -62,16 +72,16 @@ const ContactForm = () => {
 
 const Contact = () => {
   return (
-    <section>
+    <div className="contact-container">
         <h2>contact</h2>
         <ContactForm />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Aliquet enim tortor at auctor urna nunc id. Massa eget egestas purus viverra accumsan in nisl nisi scelerisque. Interdum varius sit amet mattis vulputate. Ante in nibh mauris cursus mattis molestie a iaculis. Vitae tortor condimentum lacinia quis. Sed augue lacus viverra vitae congue eu consequat. Vitae nunc sed velit dignissim sodales ut eu sem integer. Scelerisque fermentum dui faucibus in.</p>
+        <p className="contact-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Aliquet enim tortor at auctor urna nunc id. Massa eget egestas purus viverra accumsan in nisl nisi scelerisque. Interdum varius sit amet mattis vulputate. Ante in nibh mauris cursus mattis molestie a iaculis. Vitae tortor condimentum lacinia quis. Sed augue lacus viverra vitae congue eu consequat. Vitae nunc sed velit dignissim sodales ut eu sem integer. Scelerisque fermentum dui faucibus in.</p>
         <h4>contact info</h4>
         <ul>
             <li><LocationOnIcon/>Spokane, WA <br /> USA</li>
             <li><EmailIcon />maggiebrittondev@gmail.com</li>
         </ul>
-    </section>
+    </div>
   );
 }
 
