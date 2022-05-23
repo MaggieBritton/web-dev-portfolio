@@ -38,6 +38,7 @@
 
 .hero-intro {
   font-size: 1.25rem;
+  font-family: 'Mulish', sans-serif;
 }
 
 h1 {
@@ -49,8 +50,9 @@ h1 {
 }
 
 .hero-body {
-  font-size: 1.125rem;
-  line-height: 2.2;
+  font-size: 1.25rem;
+  line-height: 2;
+  font-family: 'Mulish', sans-serif;
 }
 
 /* About Styles */
@@ -263,6 +265,37 @@ label {
   margin-bottom: 2em;
 }
 
+.contact-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-info {
+  font-family: 'Mulish', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.contact-list {
+  list-style: none;
+}
+
+.contact-list-item {
+  display: flex;
+  font-family: 'Mulish', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.contact-list-item:first-of-type {
+  margin-bottom: 0.75em;
+}
+
+.contact-info-icon {
+  margin-right: 0.5em;
+}
 
 /* Footer Styles */
 

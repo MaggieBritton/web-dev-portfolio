@@ -74,13 +74,19 @@ const Contact = () => {
   return (
     <div className="contact-container">
         <h2>contact</h2>
-        <ContactForm />
-        <p className="contact-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Aliquet enim tortor at auctor urna nunc id. Massa eget egestas purus viverra accumsan in nisl nisi scelerisque. Interdum varius sit amet mattis vulputate. Ante in nibh mauris cursus mattis molestie a iaculis. Vitae tortor condimentum lacinia quis. Sed augue lacus viverra vitae congue eu consequat. Vitae nunc sed velit dignissim sodales ut eu sem integer. Scelerisque fermentum dui faucibus in.</p>
-        <h4>contact info</h4>
-        <ul>
-            <li><LocationOnIcon/>Spokane, WA <br /> USA</li>
-            <li><EmailIcon />maggiebrittondev@gmail.com</li>
-        </ul>
+        <div className="contact-content-container">
+            <div className="contact-form-container">
+               <ContactForm /> 
+            </div>
+            <div className="contact-info-container">
+                <p className="contact-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Aliquet enim tortor at auctor urna nunc id. Massa eget egestas purus viverra accumsan in nisl nisi scelerisque. Interdum varius sit amet mattis vulputate. Ante in nibh mauris cursus mattis molestie a iaculis. Vitae tortor condimentum lacinia quis. Sed augue lacus viverra vitae congue eu consequat. Vitae nunc sed velit dignissim sodales ut eu sem integer. Scelerisque fermentum dui faucibus in.</p>
+                <h4 className="contact-info">contact info</h4>
+                <ul className="contact-list">
+                    <li className="contact-list-item"><LocationOnIcon sx={{ color: '#005477' }} className="contact-info-icon" />Spokane, WA USA</li>
+                    <li className="contact-list-item"><EmailIcon sx={{ color: '#005477' }} className="contact-info-icon" />margaretbrittondev@gmail.com</li>
+                </ul>
+            </div>
+        </div> 
     </div>
   );
 }
