@@ -32,7 +32,7 @@ const ContactForm = () => {
         >
             <Form className="contact-form">
                 <div className="form-firstName">
-                    <label htmlFor="firstName">First Name</label>
+                    <label htmlFor="firstName">First Name<span className="required-star">&#42;</span></label>
                     <Field className="field" name="firstName" id="firstName" type="text" placeholder="First Name" />  
                     <ErrorMessage name="firstName">
                     {msg => <div className="error">{msg}</div>}
@@ -48,7 +48,7 @@ const ContactForm = () => {
                 </div>
                 
                 <div className="form-email">
-                    <label htmlFor="email">Email</label>
+                    <label htmlFor="email">Email<span className="required-star">&#42;</span></label>
                     <Field className="field" name="email" id="email" type="email" placeholder="name@email.com" />
                     <ErrorMessage name="email" >
                     {msg => <div className="error">{msg}</div>}
