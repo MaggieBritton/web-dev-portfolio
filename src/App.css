@@ -8,6 +8,18 @@
   padding: 0;
 }
 
+.sidebar-hero-container {
+  
+}
+
+/* Sidebar Styles */
+.sidebar-container {
+  width: 70vw;
+  height: 100vh;
+  background-color: #005477;
+
+}
+
 /* Hero Styles */
 
 .hero-container {
