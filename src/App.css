@@ -8,17 +8,52 @@
   padding: 0;
 }
 
-.sidebar-hero-container {
-  
-}
-
 /* Sidebar Styles */
 .sidebar-container {
-  width: 70vw;
   height: 100vh;
+  width: 85vw;
   background-color: #005477;
-
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
 }
+
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+  height: 100%;
+  width: 100%;
+}
+
+.sidebar-list-item {
+  list-style: none;
+  border-bottom: solid 1px #fff;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.sidebar-list-item:hover {
+  background-color: #005477;
+}
+
+.sidebar-list-item:last-of-type {
+  border-bottom: none;
+}
+
+.sidebar-link {
+  color: #fff;
+  font-family: 'Mulish', sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 4rem 8rem;
+  background-color: pink;
+}
+
 
 /* Hero Styles */
 

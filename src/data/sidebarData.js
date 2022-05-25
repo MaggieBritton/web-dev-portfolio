@@ -5,17 +5,17 @@ export const SIDEBARDATA = [
         path: "#home"
     },
     {
-        id: 0,
+        id: 1,
         name: "about",
         path: "#about"
     },
     {
-        id: 0,
+        id: 2,
         name: "projects",
         path: "#projects"
     },
     {
-        id: 0,
+        id: 3,
         name: "contact",
         path: "#contact"
     }
