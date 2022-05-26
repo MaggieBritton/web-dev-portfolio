@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { SIDEBARDATA } from '../data/sidebarData';
+import CloseIcon from '@mui/icons-material/Close';
+import IconButton from '@mui/material/IconButton';
 import { HashLink } from 'react-router-hash-link';
 
 export const Sidebar = () => {
