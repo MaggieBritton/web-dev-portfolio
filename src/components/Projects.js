@@ -1,53 +1,40 @@
 import React from 'react';
+import { PROJECTSDATA } from '../data/projectsData';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
 import IconButton from '@mui/material/IconButton';
 
 const Projects = () => {
-  return (
+  
+    const projectsData = PROJECTSDATA;
+  
+    return (
     <div className="projects-container" id="projects">
         <h2>projects</h2>
-        
-        <div className="project-container">
-            <h4>Anywhere Montessori School</h4>
-            <p className="project-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <div className="bottom-project-container">
-                <div>
-                    <IconButton>
-                      <GitHubIcon fontSize="large" sx={{ color: "#fff", "&:hover": { color: "darkgray" } }} />  
-                    </IconButton>
-                    <IconButton>
-                        <LaunchIcon fontSize="large"
-                        sx={{ color: "#fff", "&:hover": { color: "darkgray" } }} 
-                        />   
-                    </IconButton>   
+        {projectsData.map((item, index) => {
+            return (
+                <>
+                    <div key={index} className="project-container" >
+                        <h4>{item.title}</h4>
+                        <p className="project-text">{item.description}</p>
+                        <div className="bottom-project-container">
+                            <div>
+                                <IconButton>
+                                    <GitHubIcon fontSize="large" sx={{ color: "#fff", "&:hover": { color: "darkgray" } }} />  
+                                </IconButton>
+                                <IconButton>
+                                    <LaunchIcon fontSize="large"
+                                    sx={{ color: "#fff", "&:hover": { color: "darkgray" } }} 
+                                />   
+                                </IconButton>   
+                            </div>
+                        <span className="project-tech">{item.technologies.join(' | ')}</span>           
+                    </div>
                 </div>
-                
-                <span className="project-tech">HTML  |  CSS  |  Bootstrap</span>           
-            </div>
-        </div>
-        <img className="project-img" src='images/anywhereMontessoriSchool.jpg' alt='Anywhere Montessori School Webpage' />
-
-        <div className="project-container">
-            <h4>Toy Lending Library</h4>
-            <p className="project-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <div className="bottom-project-container">
-                <div>
-                <IconButton>
-                      <GitHubIcon fontSize="large" sx={{ color: "#fff", "&:hover": { color: "darkgray" } }} />  
-                    </IconButton>
-                    <IconButton>
-                        <LaunchIcon fontSize="large"
-                        sx={{ color: "#fff", "&:hover": { color: "darkgray" } }} 
-                        />   
-                    </IconButton>  
-                </div>
-                 
-                <span className="project-tech">React  |  CSS  |  Reactstrap</span>           
-            </div>
-        </div>
-        <img className="project-img" src='images/toyLendingLibrary.jpg' alt='Toy Lending Library Webpage' />
-
+                <img className="project-img" src={item.imageSrc} alt={item.imageAlt} />
+            </>
+            )
+        })}
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { Sidebar } from './Sidebar';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
@@ -16,7 +15,6 @@ const Home = () => {
   
   return (
       <div id="home">
-        {/* <Sidebar className={sidebar ? "sidebar-open" : "sidebar-closed"}/> */}
         <nav className={sidebar ? "sidebar-open" : "sidebar-closed"}>
           <div className="sidebar-container">
               <ul className="sidebar-list">
