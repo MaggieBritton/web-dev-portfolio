@@ -5,7 +5,7 @@ import IconButton from '@mui/material/IconButton';
 
 const Projects = () => {
   return (
-    <div className="projects-container">
+    <div className="projects-container" id="projects">
         <h2>projects</h2>
         
         <div className="project-container">

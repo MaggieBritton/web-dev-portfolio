@@ -15,9 +15,19 @@
   width: 80vw;
   position: fixed;
   top: 0;
-  right: -100%; /*forces offscreen*/
+  right: 0;
   display: flex;
   z-index: 100;
+}
+
+.sidebar-closed .sidebar-container {
+  transform: translateX(100%);
+  transition: transform ease-out 300ms;
+}
+
+.sidebar-open .sidebar-container {
+  transform: translateX(0);
+  transition: transform ease-out 300ms;
 }
 
 .sidebar-list {
@@ -71,6 +81,8 @@
   background-image: url("../public/images/heroBackground.jpg");
   background-size: cover;
   background-position: center;
+  transform: translateX(0);
+  transition: transform ease-out 300ms;
 }
 
 .hero-container::before {
@@ -83,12 +95,20 @@
   background-color: rgba(255, 255, 255, 0.65);
 }
 
+.hero-container.translate {
+  transform: translateX(-80%);
+}
+
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin: 2em 2em 0 2em;
+  justify-content: right;
+  margin: 2em 2em 0 0;
   z-index: 2;
+}
+
+.close-icon {
+  margin-right: -0.5em;
 }
 
 .logo {
@@ -107,8 +127,9 @@
 }
 
 .hero-intro {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-family: 'Mulish', sans-serif;
+  font-weight: 500;
 }
 
 h1 {
@@ -123,6 +144,7 @@ h1 {
   font-size: 1.25rem;
   line-height: 2;
   font-family: 'Mulish', sans-serif;
+  font-weight: 500;
 }
 
 /* About Styles */
