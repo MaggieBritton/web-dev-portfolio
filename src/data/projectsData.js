@@ -12,11 +12,21 @@ export const PROJECTSDATA = [
     {
         id: 1,
         title: "Toy Lending Library",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        description: "A React web application for a fictional toy lending library inspired by the local toy lending library to which my sons belong. Learn about the history of TLL, view the entire toy inventory, filter toys by category, view individual pages for each toy, sign up for a membership, and contact TLL with questions.",
         gitHubLink: "https://github.com/MaggieBritton/toy-lending-library",
         externalLink: " ",
-        technologies: ["React", "Reactstrap", "Bootstrap", "CSS"],
+        technologies: ["React", "Reactstrap", "Bootstrap", "CSS", "Formik", "Yup", "Framer Motion"],
         imageSrc: "images/toyLendingLibrary.jpg",
         imageAlt: "Toy Lending Library Webpage"  
+    },
+    {
+        id: 2,
+        title: "Personal Portfolio, v.1",
+        description: "A React web application to learn more about me, display my projects, and provide contact information.",
+        gitHubLink: "https://github.com/MaggieBritton/web-dev-portfolio",
+        externalLink: " ",
+        technologies: ["React", "CSS", "Formik", "Yup", "Framer Motion"],
+        imageSrc: " ",
+        imageAlt: "Personal Portfolio Webpage"  
     }
 ];
