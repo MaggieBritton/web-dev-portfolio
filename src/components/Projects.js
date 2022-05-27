@@ -19,7 +19,7 @@ const Projects = () => {
                         <p className="project-text">{item.description}</p>
                         <div className="bottom-project-container">
                             <div>
-                                <IconButton>
+                                <IconButton onClick={projectsData.gitHubLink}>
                                     <GitHubIcon fontSize="large" sx={{ color: "#fff", "&:hover": { color: "darkgray" } }} />  
                                 </IconButton>
                                 <IconButton>
