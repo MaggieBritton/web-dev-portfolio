@@ -10,8 +10,7 @@ const About = () => {
       </div>
       <div className="about-content-container">
         <div className="about-body">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus magna fringilla urna porttitor rhoncus dolor. Penatibus et magnis dis parturient montes nascetur ridiculus mus. At quis risus sed vulputate odio ut enim blandit volutpat.</p>
-          <p>Enim eu turpis egestas pretium aenean pharetra magna. Augue eget arcu dictum varius duis at consectetur lorem donec. Tempus urna et pharetra pharetra massa massa ultricies. Parturient montes nascetur ridiculus mus. Facilisi cras fermentum odio eu feugiat.</p>
+          <p>I am a maker and a problem solver who enjoys both the creativity of design and the technical skill it takes to produce websites.  </p>
         </div>
         <h5 className="about-frameworks">Current Frameworks / Libraries / Technologies: </h5>
         <p className="about-framework-list">HTML  |  CSS  |  JavaScript <br /> React.js  |  React Native  |  VS Code

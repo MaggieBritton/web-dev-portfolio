@@ -18,7 +18,7 @@ const Projects = () => {
                         <h4>{item.title}</h4>
                         <p className="project-text">{item.description}</p>
                         <div className="bottom-project-container">
-                            <div>
+                            <div className="icon-container">
                                 <IconButton 
                                 href={item.gitHubLink} target="_blank">
                                     <GitHubIcon fontSize="large" sx={{ color: "#fff", "&:hover": { color: "darkgray" } }} />  
@@ -31,11 +31,11 @@ const Projects = () => {
                                 />   
                                 </IconButton>   
                             </div>
-                        <span className="project-tech">{item.technologies.join(' | ')}</span>           
+                            <span className="project-tech">{item.technologies.join(' | ')}</span>           
+                        </div>
                     </div>
-                </div>
-                <img className="project-img" src={item.imageSrc} alt={item.imageAlt} />
-            </>
+                    <img className="project-img" src={item.imageSrc} alt={item.imageAlt} />
+                </>
             )
         })}
     </div>

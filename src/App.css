@@ -12,7 +12,7 @@
 .sidebar-container {
   background-color: #005477;
   height: 100vh;
-  width: 80vw;
+  width: 70vw;
   position: fixed;
   top: 0;
   right: 0;
@@ -69,7 +69,7 @@
 }
 
 
-/* Hero Styles */
+/* Home Styles */
 
 .hero-container {
   position: relative;
@@ -96,25 +96,15 @@
 }
 
 .hero-container.translate {
-  transform: translateX(-80%);
+  transform: translateX(-70%);
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: right;
-  margin: 2em 2em 0 0;
+  margin: 1.25em 1.25em 0 0;
   z-index: 2;
-}
-
-.close-icon {
-  margin-right: -0.5em;
-}
-
-.logo {
-  font-family: 'Mulish', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
 }
 
 .hero-content {
