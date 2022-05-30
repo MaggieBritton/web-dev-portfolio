@@ -79,7 +79,8 @@ const Contact = () => {
                <ContactForm /> 
             </div>
             <div className="contact-info-container">
-                <p className="contact-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Aliquet enim tortor at auctor urna nunc id. Massa eget egestas purus viverra accumsan in nisl nisi scelerisque. Interdum varius sit amet mattis vulputate. Ante in nibh mauris cursus mattis molestie a iaculis. Vitae tortor condimentum lacinia quis. Sed augue lacus viverra vitae congue eu consequat. Vitae nunc sed velit dignissim sodales ut eu sem integer. Scelerisque fermentum dui faucibus in.</p>
+                <p className="contact-text">I'm open to taking on on new projects. I would love to discuss a project you have in mind, whether it be a personal site for you, a site for your business, or something else! </p>
+                <p className="contact-text">I am currently in the process of relocating from Decorah, IA to Spokane, WA. I will be seeking employment in Spokane starting in July 2022. If you think I would be a good fit for your company, please don't hesitate to reach out! </p>
                 <h4 className="contact-info">contact info</h4>
                 <ul className="contact-list">
                     <li className="contact-list-item"><LocationOnIcon sx={{ color: '#005477' }} className="contact-info-icon" />Spokane, WA USA</li>

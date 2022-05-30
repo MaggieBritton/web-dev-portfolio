@@ -15,7 +15,7 @@ const Footer = () => {
               <LinkedInIcon fontSize="large" sx={{ color: "#fff", "&:hover": { color: "darkgray" } }} />
             </IconButton>  
         </div>
-        <small className="copyright">&copy; 2022 M. Britton Designs</small>
+        <small className="copyright">&copy; 2022 Margaret Britton</small>
     </div>
   );
 }

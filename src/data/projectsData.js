@@ -22,7 +22,7 @@ export const PROJECTSDATA = [
     {
         id: 2,
         title: "Personal Portfolio, v.1",
-        description: "A React web application to learn more about me, display my projects, and provide contact information.",
+        description: "A React web application to provide information about me, display my projects, and provide contact information.",
         gitHubLink: "https://github.com/MaggieBritton/web-dev-portfolio",
         externalLink: " ",
         technologies: ["React", "CSS", "Formik", "Yup", "Framer Motion"],
