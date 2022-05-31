@@ -251,6 +251,12 @@ h3 {
   background: #000;
 }
 
+@media screen and (min-width: 1000px) {
+  h2 {
+    font-size: 4rem;
+  }
+}
+
 /* Projects Styles */
 
 .projects-container {
@@ -424,6 +430,24 @@ label {
 
 .contact-info-icon {
   margin-right: 0.5em;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-content-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 2em;
+    margin: 3em;
+    max-width: 1000px;
+  }
+
 }
 
 /* Footer Styles */
