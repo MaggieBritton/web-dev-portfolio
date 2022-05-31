@@ -32,7 +32,7 @@ const Home = () => {
           <div className="header">
             <IconButton onClick={toggleSidebar}>   
                 {sidebar ? 
-                <CloseIcon onClick={toggleSidebar}  className="close-icon" fontSize="large" sx={{ color: "#000", "&:hover": { color: "#005477" } }} /> 
+                <CloseIcon className="close-icon" fontSize="large" sx={{ color: "#000", "&:hover": { color: "#005477" } }} /> 
                 :
                 <MenuIcon className="menu-icon" fontSize="large" sx={{ color: "#000", "&:hover": { color: "#005477" } }}  />
               }  

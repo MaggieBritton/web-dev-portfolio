@@ -137,6 +137,24 @@ h1 {
   font-weight: 500;
 }
 
+@media screen and (min-width: 1000px) {
+  .hero-content {
+    margin: auto 12em;
+  }
+
+  .hero-intro {
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  .hero-body {
+    font-size: 1.5rem;
+  }
+}
+
 /* About Styles */
 
 .about-container {
