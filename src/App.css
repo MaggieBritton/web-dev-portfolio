@@ -174,12 +174,12 @@ h2 {
 
 .about-img-container {
   display: grid;
-  grid-template-columns: [img-start] 3fr [text-start] 2fr [img-end] 1fr [screen-end];
+  grid-template-columns: [img-start] 60% [text-start] 1fr [img-end] 1fr [screen-end];
 }
 
 .about-img {
   border-radius: 50%;
-  transform: translate(-15%);
+  transform: translate(-10%);
   width: 100%;
   grid-column: img-start / img-end;
   grid-row: 1 / 2;
@@ -196,7 +196,7 @@ h3 {
   z-index: 2;
 }
 
-.about-content-container {
+.about-text-container {
   margin: 2em;
 }
 
@@ -255,6 +255,37 @@ h3 {
   h2 {
     font-size: 4rem;
   }
+
+  .about-img-container {
+    display: block;
+  }
+
+  .about-content-container {
+    display: grid;
+    grid-template-columns: [image-start] 33% [text-start] 66% [text-end];
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .about-img {
+    grid-column: image-start / text-start;
+    grid-row: 1 / 2;
+  }
+
+  .about-img-container h3 {
+    grid-column: text-start / text-end;
+    grid-row: 1 / 2;
+  }
+
+  .about-text-container {
+    grid-column: text-start / text-end;
+    grid-row: 1 / 3;
+  }
+
+  .about-frameworks-container {
+    grid-column: image-start / text-start;
+    grid-row: 1 / 2;
+  }
+
 }
 
 /* Projects Styles */

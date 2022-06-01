@@ -8,10 +8,10 @@ const Footer = () => {
     <div className="footer-container">
         <p className="connect">connect with me</p>
         <div className="footer-icon-container">
-            <IconButton>
+            <IconButton href="https://github.com/MaggieBritton" target="_blank">
               <GitHubIcon fontSize="large" sx={{ color: "#fff", "&:hover": { color: "darkgray" } }} />
             </IconButton>
-            <IconButton>
+            <IconButton href="https://www.linkedin.com/in/maggiebritton4/" target="_blank">
               <LinkedInIcon fontSize="large" sx={{ color: "#fff", "&:hover": { color: "darkgray" } }} />
             </IconButton>  
         </div>
