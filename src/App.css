@@ -138,6 +138,10 @@ h1 {
 }
 
 @media screen and (min-width: 1000px) {
+  .header {
+    margin-right: 2em;
+  }
+  
   .hero-content {
     margin: auto 12em;
   }
@@ -172,7 +176,7 @@ h2 {
   text-align: center;
 }
 
-.about-img-container {
+.about-content-container {
   display: grid;
   grid-template-columns: [img-start] 60% [text-start] 1fr [img-end] 1fr [screen-end];
 }
@@ -185,7 +189,7 @@ h2 {
   grid-row: 1 / 2;
 }
 
-h3 {
+.about-content-container h3 {
   color: #005477;
   font-family: 'Mulish', sans-serif;
   font-size: 2.5rem;
@@ -196,14 +200,12 @@ h3 {
   z-index: 2;
 }
 
-.about-text-container {
-  margin: 2em;
-}
-
 .about-body {
   font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 2em;
+  margin: 2em;
+  grid-column: img-start / screen-end;
+  grid-row: 2 / 3;
 }
 
 .about-me-list {
@@ -217,6 +219,11 @@ h3 {
 
 .about-body-text {
   margin-bottom: 1.25em;
+}
+
+.about-frameworks-container {
+  grid-column: img-start / screen-end;
+  grid-row: 3 / 4;
 }
 
 .about-frameworks, .about-framework-list {
@@ -252,40 +259,40 @@ h3 {
 }
 
 @media screen and (min-width: 1000px) {
+  .about-container {
+    margin: 4em 2em;
+  }
+  
   h2 {
     font-size: 4rem;
-  }
-
-  .about-img-container {
-    display: block;
   }
 
   .about-content-container {
     display: grid;
     grid-template-columns: [image-start] 33% [text-start] 66% [text-end];
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: [img-top] 10% [header-top] 10% [body-top] 50% [list-top] 30% [screen-bottom];
   }
 
   .about-img {
     grid-column: image-start / text-start;
-    grid-row: 1 / 2;
+    grid-row: img-top / list-top ;
+    transform: translate(0%);
   }
 
-  .about-img-container h3 {
+  .about-content-container h3 {
     grid-column: text-start / text-end;
-    grid-row: 1 / 2;
+    grid-row: header-top / body-top;
   }
 
-  .about-text-container {
+  .about-body {
     grid-column: text-start / text-end;
-    grid-row: 1 / 3;
+    grid-row: body-top / screen-bottom;
   }
 
   .about-frameworks-container {
     grid-column: image-start / text-start;
-    grid-row: 1 / 2;
+    grid-row: list-top / screen-bottom;
   }
-
 }
 
 /* Projects Styles */
