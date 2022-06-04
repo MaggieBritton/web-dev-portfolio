@@ -178,7 +178,7 @@ h2 {
 
 .about-content-container {
   display: grid;
-  grid-template-columns: [img-start] 60% [text-start] 1fr [img-end] 1fr [screen-end];
+  grid-template-columns: [img-start] 50% [text-start] 15% [img-end] 1fr [screen-end];
 }
 
 .about-img {
@@ -258,13 +258,40 @@ h2 {
   background: #000;
 }
 
-@media screen and (min-width: 1000px) {
-  .about-container {
-    margin: 4em 2em;
+@media screen and (min-width: 550px) {
+
+  .about-img {
+    grid-column: img-start / screen-end;
+    grid-row: 1 / 2;
+    margin: 0 auto;
+    max-width: 350px;
+    transform: translate(0%);
   }
-  
+
+  .about-content-container > h3 {
+    font-size: 3rem;
+    grid-column: img-start / screen-end;
+    grid-row: 2 / 3;
+    margin: 0.5em auto 0;
+  }
+
   h2 {
     font-size: 4rem;
+  }
+
+  .about-body {
+    grid-row: 3 / 4;
+  }
+
+  .about-frameworks-container {
+    grid-row: 4 / 5;
+  }
+
+}
+
+@media screen and (min-width: 900px) {
+  .about-container {
+    margin: 4em 2em;
   }
 
   .about-content-container {
