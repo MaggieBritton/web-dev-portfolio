@@ -14,27 +14,29 @@ const Projects = () => {
         {projectsData.map((item, index) => {
             return (
                 <>
-                    <div key={index} className="project-container" >
-                        <h4>{item.title}</h4>
-                        <p className="project-text">{item.description}</p>
-                        <div className="bottom-project-container">
-                            <div className="icon-container">
-                                <IconButton 
-                                href={item.gitHubLink} target="_blank">
-                                    <GitHubIcon fontSize="large" sx={{ color: "#fff", "&:hover": { color: "darkgray" } }} />  
-                                </IconButton>
-                                <IconButton 
-                                href={item.externalLink}
-                                target="_blank">
-                                    <LaunchIcon fontSize="large"
-                                    sx={{ color: "#fff", "&:hover": { color: "darkgray" } }} 
-                                />   
-                                </IconButton>   
+                    <div className="project-content-container">
+                        <div key={index} className="project-container" >
+                            <h4>{item.title}</h4>
+                            <p className="project-text">{item.description}</p>
+                            <div className="bottom-project-container">
+                                <div className="icon-container">
+                                    <IconButton 
+                                    href={item.gitHubLink} target="_blank">
+                                        <GitHubIcon fontSize="large" sx={{ color: "#fff", "&:hover": { color: "darkgray" } }} />  
+                                    </IconButton>
+                                    <IconButton 
+                                    href={item.externalLink}
+                                    target="_blank">
+                                        <LaunchIcon fontSize="large"
+                                        sx={{ color: "#fff", "&:hover": { color: "darkgray" } }} 
+                                    />   
+                                    </IconButton>   
+                                </div>
+                                <span className="project-tech">{item.technologies.join(' | ')}</span>           
                             </div>
-                            <span className="project-tech">{item.technologies.join(' | ')}</span>           
                         </div>
+                        <img className="project-img" src={item.imageSrc} alt={item.imageAlt} />
                     </div>
-                    <img className="project-img" src={item.imageSrc} alt={item.imageAlt} />
                 </>
             )
         })}
