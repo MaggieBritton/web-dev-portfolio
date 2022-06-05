@@ -163,7 +163,7 @@ h1 {
 
 .about-container {
   background-color: #fff;
-  width: 100%; 
+  width: 100vw; 
   margin: 4em 0;
 }
 
@@ -189,7 +189,7 @@ h2 {
   grid-row: 1 / 2;
 }
 
-.about-content-container h3 {
+.about-content-container > h3 {
   color: #005477;
   font-family: 'Mulish', sans-serif;
   font-size: 2.5rem;
@@ -289,36 +289,39 @@ h2 {
 
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
   .about-container {
-    margin: 4em 2em;
+    margin: 4em auto;
   }
 
   .about-content-container {
     display: grid;
-    grid-template-columns: [image-start] 33% [text-start] 66% [text-end];
-    grid-template-rows: [img-top] 10% [header-top] 10% [body-top] 50% [list-top] 30% [screen-bottom];
+    grid-template-columns: [image-start] minmax(0, 1fr) [text-start] minmax(0, 2fr) [text-end];
+    grid-template-rows: [section-top] 10% [body-top] 50% [list-top] minmax(0, 1fr) [section-bottom];
+    margin: 0 2em;
   }
 
   .about-img {
     grid-column: image-start / text-start;
-    grid-row: img-top / list-top ;
+    grid-row: section-top / list-top ;
+    margin: auto;
     transform: translate(0%);
   }
 
-  .about-content-container h3 {
+  .about-content-container > h3 {
     grid-column: text-start / text-end;
-    grid-row: header-top / body-top;
+    grid-row: section-top / body-top;
   }
 
   .about-body {
     grid-column: text-start / text-end;
-    grid-row: body-top / screen-bottom;
+    grid-row: body-top / section-bottom;
   }
 
   .about-frameworks-container {
     grid-column: image-start / text-start;
-    grid-row: list-top / screen-bottom;
+    grid-row: list-top / section-bottom;
+    margin-top: 0.5em;
   }
 }
 
