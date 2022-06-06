@@ -329,6 +329,9 @@ h2 {
 
 .projects-container {
   background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 4em 0;
   width: 100%; 
 }
@@ -374,7 +377,6 @@ h4 {
 
 .project-img {
   width: 100%;
-  opacity: 0.6;
   max-width: 35rem;
   margin: 0 auto;
   cursor: pointer;
@@ -385,12 +387,6 @@ h4 {
 }
 
 @media screen and (min-width: 1000px) {
-.projects-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
   .project-content-container {
     display: grid;
     grid-template-columns: [start-proj-details] 45%  [start-proj-img] minmax(0, 1fr) [end-proj-img];

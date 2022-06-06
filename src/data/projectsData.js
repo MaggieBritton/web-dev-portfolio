@@ -26,7 +26,7 @@ export const PROJECTSDATA = [
         gitHubLink: "https://github.com/MaggieBritton/web-dev-portfolio",
         externalLink: " ",
         technologies: ["React", "CSS", "Formik", "Yup", "Framer Motion"],
-        imageSrc: " ",
+        imageSrc: "images/portfolio.jpg",
         imageAlt: "Personal Portfolio Webpage"  
     }
 ];
