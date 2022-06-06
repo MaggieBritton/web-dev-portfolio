@@ -3,6 +3,7 @@ import { PROJECTSDATA } from '../data/projectsData';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
 import IconButton from '@mui/material/IconButton';
+import { motion } from 'framer-motion';
 
 const Projects = () => {
   
@@ -10,11 +11,21 @@ const Projects = () => {
   
     return (
     <div className="projects-container" id="projects">
-        <h2>projects</h2>
+        <motion.h2
+        initial={{ y: 200, opacity: 0 }}
+        whileInView={{ y:0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ ease: 'easeOut', duration: 1 }}
+        >projects</motion.h2>
         {projectsData.map((item, index) => {
             return (
                 <>
-                    <div className="project-content-container">
+                    <motion.div className="project-content-container"
+                    initial={{ y: 200, opacity: 0 }}
+                    whileInView={{ y:0, opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ ease: 'easeOut', duration: 1 }}
+                    >
                         <div key={index} className="project-container" >
                             <h4>{item.title}</h4>
                             <p className="project-text">{item.description}</p>
@@ -36,7 +47,7 @@ const Projects = () => {
                             </div>
                         </div>
                         <img className="project-img" src={item.imageSrc} alt={item.imageAlt} />
-                    </div>
+                    </motion.div>
                 </>
             )
         })}

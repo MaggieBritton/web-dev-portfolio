@@ -3,6 +3,7 @@ import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import EmailIcon from '@mui/icons-material/Email';
+import { motion } from 'framer-motion';
 
 const ContactForm = () => {
     return(
@@ -72,7 +73,12 @@ const ContactForm = () => {
 
 const Contact = () => {
   return (
-    <div className="contact-container" id="contact">
+    <motion.div className="contact-container" id="contact"
+        initial={{ y: 200, opacity: 0 }}
+        whileInView={{ y:0, opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ ease: 'easeOut', duration: 1 }}
+    >
         <h2>contact</h2>
         <div className="contact-content-container">
             <div className="contact-form-container">
@@ -88,7 +94,7 @@ const Contact = () => {
                 </ul>
             </div>
         </div> 
-    </div>
+    </motion.div>
   );
 }
 

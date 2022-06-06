@@ -1,8 +1,14 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const About = () => {
   return (
-    <div className="about-container" id="about">
+    <motion.div className="about-container" id="about"
+      initial={{ y: 200, opacity: 0 }}
+      whileInView={{ y:0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ ease: 'easeOut', duration: 1 }}
+    >
       <h2>about</h2>
       <div className="about-content-container">
         <img className="about-img" src='images/margaretBritton.jpg' alt='Margaret Britton' />
@@ -24,7 +30,7 @@ const About = () => {
           <button className="resume-button">Resum&eacute;</button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
