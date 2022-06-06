@@ -46,7 +46,22 @@ const Projects = () => {
                                 <span className="project-tech">{item.technologies.join(' | ')}</span>           
                             </div>
                         </div>
-                        <img className="project-img" src={item.imageSrc} alt={item.imageAlt} />
+                        <div className="project-img-container">
+                          <motion.img 
+                            className="project-img" 
+                            src={item.imageSrc} 
+                            alt={item.imageAlt}
+                            whileHover={{
+                                scale: 1.1,
+                                transition: { duration: 0.5 }
+                            }}
+                            whileFocus={{
+                                scale: 1.1,
+                                transition: { duration: 0.5 }
+                            }}
+                            />  
+                        </div>
+                        
                     </motion.div>
                 </>
             )
