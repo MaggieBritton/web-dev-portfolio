@@ -344,6 +344,7 @@ h4 {
   background-color: #005477;
   color: #fff;
   padding: 2em 1.5em;
+  max-width: 35rem;
 }
 
 .project-text {
@@ -374,6 +375,9 @@ h4 {
 .project-img {
   width: 100%;
   opacity: 0.6;
+  max-width: 35rem;
+  margin: 0 auto;
+  cursor: pointer;
 }
 
 .project-img:hover, .project-img:focus {
@@ -381,24 +385,34 @@ h4 {
 }
 
 @media screen and (min-width: 1000px) {
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
   .project-content-container {
     display: grid;
     grid-template-columns: [start-proj-details] 45%  [start-proj-img] minmax(0, 1fr) [end-proj-img];
     /* grid-template-rows: [top-proj-img] 15% [top-proj-details] 60% [bottom-proj-details] 35% [bottom-proj-image]; */
     grid-gap: 1.5em;
     margin: 0 2em;
-    max-width: 60rem;
+    max-width: 62rem;
   }
   
   .project-container {
     grid-column: start-proj-details / start-proj-img;
     grid-row: top-proj-details / bottom-proj-details;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .project-img {
     grid-column: start-proj-img / end-proj-img;
     grid-row: top-proj-img / bottom-proj-img;
+
   }
 }
 
