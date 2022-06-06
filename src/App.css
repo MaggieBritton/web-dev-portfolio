@@ -383,13 +383,15 @@ h4 {
 @media screen and (min-width: 1000px) {
   .project-content-container {
     display: grid;
-    grid-template-columns: [start-proj-details] 40% [start-proj-img] 5% [end-proj-details] minmax(0, 1fr) [end-proj-img];
-    grid-template-rows: [top-proj-img] 20% [top-proj-details] 1fr [bottom-proj-img] 10% [bottom-proj-details];
-    margin: 0 4em 2em;
+    grid-template-columns: [start-proj-details] 45%  [start-proj-img] minmax(0, 1fr) [end-proj-img];
+    /* grid-template-rows: [top-proj-img] 15% [top-proj-details] 60% [bottom-proj-details] 35% [bottom-proj-image]; */
+    grid-gap: 1.5em;
+    margin: 0 2em;
+    max-width: 60rem;
   }
   
   .project-container {
-    grid-column: start-proj-details / end-proj-details;
+    grid-column: start-proj-details / start-proj-img;
     grid-row: top-proj-details / bottom-proj-details;
     z-index: 2;
   }
