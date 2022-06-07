@@ -65,9 +65,15 @@
   font-family: 'Mulish', sans-serif;
   font-size: 3rem;
   font-weight: 400;
-  height: inherit;text-decoration: none;
+  height: inherit;
+  text-decoration: none;
 }
 
+@media screen and (min-width: 1000px) {
+  .sidebar-container {
+    width: 30vw;
+  }
+}
 
 /* Home Styles */
 
@@ -138,10 +144,16 @@ h1 {
 }
 
 @media screen and (min-width: 1000px) {
-  .header {
-    margin-right: 2em;
+  .hero-container.translate {
+    transform: translateX(-30%);
   }
-  
+}
+
+@media screen and (min-width: 1000px) {
+  .header {
+    margin: 2em;
+  }
+
   .hero-content {
     margin: auto 12em;
   }
@@ -394,7 +406,6 @@ h4 {
   .project-content-container {
     display: grid;
     grid-template-columns: [start-proj-details] 45%  [start-proj-img] minmax(0, 1fr) [end-proj-img];
-    /* grid-template-rows: [top-proj-img] 15% [top-proj-details] 60% [bottom-proj-details] 35% [bottom-proj-image]; */
     grid-gap: 1.5em;
     margin: 0 2em;
     max-width: 62rem;
@@ -409,7 +420,7 @@ h4 {
     justify-content: center;
   }
 
-  .project-img {
+  .project-img-container {
     grid-column: start-proj-img / end-proj-img;
     grid-row: top-proj-img / bottom-proj-img;
 
