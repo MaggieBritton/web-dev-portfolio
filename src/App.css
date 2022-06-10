@@ -91,7 +91,9 @@
   transition: transform ease-out 300ms;
 }
 
-/* .hero-container::before {
+/* opacity filter for background, if needed
+
+.hero-container::before {
   content: ' ';
   position: absolute;
   top: 0px;
