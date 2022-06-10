@@ -8,6 +8,18 @@ import { motion } from 'framer-motion';
 
 const Home = () => {
   
+  /* try something like this to get the nav and toggle working and responsive (add CSS for media query) */
+  const [active, setActive] = useState("nav-menu");
+  const [icon, setIcon] = useState("nav-toggler");
+  const navToggle = () => {
+    if (active ==="nav-menu") {
+      setActive("nav-menu nav-active");
+    } else setActive("nav-menu");
+    if (icon === "nav-toggler") {
+      setIcon("nav-toggler toggle");
+    } else setIcon ("nav-toggler");
+  }
+  
   const [sidebar, setSidebar] = useState(false);
 
   const toggleSidebar = () => setSidebar(!sidebar);
