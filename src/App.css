@@ -8,72 +8,117 @@
   padding: 0;
 }
 
-/* Sidebar Styles */
-.sidebar-container {
-  background-color: #005477;
-  height: 100vh;
-  width: 70vw;
-  position: fixed;
-  top: 0;
-  right: 0;
-  display: flex;
-  z-index: 100;
-}
+/* Nav & Sidebar Styles */
 
-.sidebar-closed .sidebar-container {
-  transform: translateX(100%);
-  transition: transform ease-out 300ms;
-}
-
-.sidebar-open .sidebar-container {
-  transform: translateX(0);
-  transition: transform ease-out 300ms;
-}
-
-.sidebar-list {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 100%;
-  width: 100%;
-}
-
-.sidebar-list-item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  list-style: none;
-  border-bottom: solid 1px #fff;
-  height: 100%;
-}
-
-.sidebar-list-item:hover, .sidebar-list-item:focus {
-  background-color: #3b7f9c;
-  cursor: pointer;
-}
-
-.sidebar-list-item:last-of-type {
-  border-bottom: none;
-}
-
-.sidebar-link {
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Mulish', sans-serif;
-  font-size: 3rem;
-  font-weight: 400;
-  height: inherit;
-  text-decoration: none;
-}
-
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 768px) {
   .sidebar-container {
-    width: 30vw;
+    background-color: #005477;
+    height: 100vh;
+    width: 70vw;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    z-index: 100;
+  }
+  
+ .sidebar-closed {
+    transform: translateX(100%);
+    transition: transform ease-out 300ms;
+  }
+  
+  .sidebar-open {
+    transform: translateX(0);
+    transition: transform ease-out 300ms;
+  }
+  
+  .sidebar-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .sidebar-list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+    border-bottom: solid 1px #fff;
+    height: 100%;
+  }
+  
+  .sidebar-list-item:hover, .sidebar-list-item:focus {
+    background-color: #3b7f9c;
+    cursor: pointer;
+  }
+  
+  .sidebar-list-item:last-of-type {
+    border-bottom: none;
+  }
+  
+  .sidebar-link {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Mulish', sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    height: inherit;
+    text-decoration: none;
   }
 }
+
+@media screen and (min-width: 769px) {
+  .nav {
+    background-color: #005477;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100vw;
+    height: 7vh; 
+    position: fixed;
+    z-index: 100;
+  }
+
+  .sidebar-list {
+    display: flex;
+    flex-direction: row;
+    margin-right: 2.5rem;
+  }
+
+  .sidebar-list-item {
+    list-style: none;
+    padding: 0 1.5rem;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .sidebar-link {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Mulish', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .sidebar-list-item:hover, .sidebar-list-item:focus {
+    background-color: #3b7f9c;
+    cursor: pointer;
+  }
+}
+
+
+
 
 /* Home Styles */
 
@@ -103,11 +148,11 @@
   background-color: rgba(255, 255, 255, 0.75);
 } */
 
-.hero-container.translate {
+.translate {
   transform: translateX(-70%);
 }
 
-.header {
+.menu-icon-container {
   display: flex;
   align-items: center;
   justify-content: right;
@@ -145,17 +190,13 @@ h1 {
   font-weight: 500;
 }
 
-@media screen and (min-width: 1000px) {
-  .hero-container.translate {
-    transform: translateX(-30%);
+@media screen and (min-width: 769px) {
+  .menu-icon-container {
+    display: none;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .header {
-    margin: 2em;
-  }
-
   .hero-content {
     margin: auto 12em;
   }
@@ -178,7 +219,7 @@ h1 {
 .about-container {
   background-color: #fff;
   width: 100vw; 
-  margin: 4em 0;
+  padding: 4em 0;
 }
 
 h2 {
@@ -432,7 +473,7 @@ h4 {
 /* Contact Styles */
 
 .contact-container {
-  margin: 4em 2em;
+  padding: 4em 2em;
 }
 
 .contact-form {

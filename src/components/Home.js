@@ -8,18 +8,6 @@ import { motion } from 'framer-motion';
 
 const Home = () => {
   
-  /* try something like this to get the nav and toggle working and responsive (add CSS for media query) */
-  const [active, setActive] = useState("nav-menu");
-  const [icon, setIcon] = useState("nav-toggler");
-  const navToggle = () => {
-    if (active ==="nav-menu") {
-      setActive("nav-menu nav-active");
-    } else setActive("nav-menu");
-    if (icon === "nav-toggler") {
-      setIcon("nav-toggler toggle");
-    } else setIcon ("nav-toggler");
-  }
-  
   const [sidebar, setSidebar] = useState(false);
 
   const toggleSidebar = () => setSidebar(!sidebar);
@@ -28,21 +16,21 @@ const Home = () => {
   
   return (
       <div id="home">
-        <nav className={sidebar ? "sidebar-open" : "sidebar-closed"}>
-          <div className="sidebar-container">
-              <ul className="sidebar-list">
-                  {sidebarData.map((item, index) => {
-                  return(
-                      <li key={index} className="sidebar-list-item" onClick={toggleSidebar}>
-                      <HashLink to={item.path} className="sidebar-link" smooth>{item.name}</HashLink>
-                      </li>
-                  )
-                  })}
-              </ul>
+        <nav className="nav">
+          <div className={sidebar ? "sidebar-container sidebar-open" : "sidebar-container sidebar-closed"}>
+            <ul className="sidebar-list">
+                {sidebarData.map((item, index) => {
+                return(
+                    <li key={index} className="sidebar-list-item" onClick={sidebar ? toggleSidebar: undefined}>
+                    <HashLink to={item.path} className="sidebar-link" smooth>{item.name}</HashLink>
+                    </li>
+                )
+                })}
+            </ul>
           </div>
         </nav>
         <div className={sidebar ? "hero-container translate" : "hero-container"} >
-          <div className="header">
+          <div className="menu-icon-container">
             <IconButton onClick={toggleSidebar}>   
                 {sidebar ? 
                 <CloseIcon className="close-icon" fontSize="large" sx={{ color: "#000", "&:hover": { color: "#005477" } }} /> 
