@@ -31,6 +31,7 @@ const ContactForm = () => {
                 resetForm({ values: '' });
             }}
         >
+            {(formik) => (
             <Form className="contact-form">
                 <div className="form-firstName">
                     <label htmlFor="firstName">First Name<span className="required-star">&#42;</span></label>
@@ -62,11 +63,12 @@ const ContactForm = () => {
                 </div>
                
                 <div className="form-button">
-                    <button className="form-send-button"type="button">Send</button> 
+                    <button
+                        disabled={!formik.isValid || !formik.dirty}
+                        className="form-send-button" type="submit">Send</button>
                 </div>
-                
-
             </Form>
+            )}
         </Formik>
     );
 }

@@ -553,6 +553,10 @@ label {
   background: #000;
 }
 
+.form-send-button.disabled {
+  opacity: 0.5;
+}
+
 .contact-text {
   line-height: 1.6;
   margin-bottom: 2em;
