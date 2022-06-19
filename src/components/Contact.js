@@ -6,6 +6,34 @@ import EmailIcon from '@mui/icons-material/Email';
 import { motion } from 'framer-motion';
 
 const ContactForm = () => {
+    
+    const encode = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
+      }
+
+    const onSubmit = (values, { resetForm }) => {
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", ...values })
+          })
+            .then(response => {
+                if(!response.ok) {
+                    throw new Error(response.status)
+                } else if (response.ok) {
+                    alert("Success!");
+                    resetForm({ values: '' });
+                } else {
+                    alert("Something went wrong!");
+                }
+                return response
+            })
+            .catch(error => alert(error));
+        console.log(values);    
+    }  
+    
     return(
         <Formik
             initialValues={{
@@ -26,13 +54,11 @@ const ContactForm = () => {
                     .email('Invalid email address.')
                     .required('Required')
             })}
-            onSubmit={(values, { resetForm }) => {
-                console.log(values);
-                resetForm({ values: '' });
-            }}
+            onSubmit={onSubmit}
         >
             {(formik) => (
             <Form className="contact-form">
+            <input type="hidden" name="form-name" value="contact" />
                 <div className="form-firstName">
                     <label htmlFor="firstName">First Name<span className="required-star">&#42;</span></label>
                     <Field className="field" name="firstName" id="firstName" type="text" placeholder="First Name" />  
