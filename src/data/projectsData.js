@@ -4,7 +4,7 @@ export const PROJECTSDATA = [
         title: "Anywhere Montessori School",
         description: "A static site for a fictional Montessori school. Learn about the school, its guides, the daily schedule, and the Montessori method. Fill out an application form for your child to attend AMS. Contact the school to schedule a visit or ask questions.",
         gitHubLink: "https://github.com/MaggieBritton/anywhere-montessori-school",
-        externalLink: " ",
+        externalLink: "https://anywheremontessorischool.netlify.app",
         technologies: ["HTML", "CSS", "Bootstrap"],
         imageSrc: "images/anywhereMontessoriSchool.jpg",
         imageAlt: "Anywhere Montessori School Webpage" 
@@ -14,7 +14,7 @@ export const PROJECTSDATA = [
         title: "Toy Lending Library",
         description: "A React web application for a fictional toy lending library inspired by the local toy lending library to which my sons belong. Learn about the history of TLL, view the entire toy inventory, filter toys by category, view individual pages for each toy, sign up for a membership, and contact TLL with questions.",
         gitHubLink: "https://github.com/MaggieBritton/toy-lending-library",
-        externalLink: " ",
+        externalLink: "https://toylendinglibrary.netlify.app",
         technologies: ["React", "Reactstrap", "Bootstrap", "CSS", "Formik", "Yup", "Framer Motion"],
         imageSrc: "images/toyLendingLibrary.jpg",
         imageAlt: "Toy Lending Library Webpage"  
