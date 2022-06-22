@@ -424,7 +424,7 @@ h4 {
 }
 
 .project-tech {
-  flex: 70%;
+  flex: 65%;
   text-align: right;
   font-size: 1rem;
   font-weight: 300;
@@ -467,6 +467,14 @@ h4 {
     grid-column: start-proj-img / end-proj-img;
     grid-row: top-proj-img / bottom-proj-img;
 
+  }
+
+  .icon-container {
+    flex: 40%;
+  }
+
+  .project-tech {
+    flex: 55%;
   }
 }
 

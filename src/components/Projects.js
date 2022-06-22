@@ -2,6 +2,7 @@ import React from 'react';
 import { PROJECTSDATA } from '../data/projectsData';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 import IconButton from '@mui/material/IconButton';
 import { motion } from 'framer-motion';
 
@@ -41,7 +42,13 @@ const Projects = () => {
                                         <LaunchIcon fontSize="large"
                                         sx={{ color: "#fff", "&:hover": { color: "darkgray" } }} 
                                     />   
-                                    </IconButton>   
+                                    </IconButton>
+                                     {item.youTubeLink != null &&
+                                        <IconButton href={item.youTubeLink} target="_blank">
+                                            <YouTubeIcon fontSize="large" sx={{ color: "#fff", "&:hover": { color: "darkgray" } }} />  
+                                        </IconButton>   
+                                    } 
+                                     
                                 </div>
                                 <span className="project-tech">{item.technologies.join(' | ')}</span>           
                             </div>
