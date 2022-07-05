@@ -118,7 +118,7 @@ const Contact = () => {
                 <h4 className="contact-info">contact info</h4>
                 <ul className="contact-list">
                     <li className="contact-list-item"><LocationOnIcon sx={{ color: '#005477' }} className="contact-info-icon" />Spokane, WA USA</li>
-                    <li className="contact-list-item"><EmailIcon sx={{ color: '#005477' }} className="contact-info-icon" />margaretbrittondev@gmail.com</li>
+                    <li className="contact-list-item"><EmailIcon sx={{ color: '#005477' }} className="contact-info-icon" />margaret.ann.britton@gmail.com</li>
                 </ul>
             </div>
         </div> 

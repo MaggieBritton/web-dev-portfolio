@@ -43,7 +43,7 @@ const Projects = () => {
                                         sx={{ color: "#fff", "&:hover": { color: "darkgray" } }} 
                                     />   
                                     </IconButton>
-                                     {item.youTubeLink != null &&
+                                    {item.youTubeLink != null &&
                                         <IconButton href={item.youTubeLink} target="_blank">
                                             <YouTubeIcon fontSize="large" sx={{ color: "#fff", "&:hover": { color: "darkgray" } }} />  
                                         </IconButton>   
