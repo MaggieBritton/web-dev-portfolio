@@ -1,7 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import pdf from '../documents/WebDevResume.pdf';
+
+
 
 const About = () => {
+
   return (
     <motion.div className="about-container" id="about"
       initial={{ y: 200, opacity: 0 }}
@@ -29,7 +33,7 @@ const About = () => {
           <h5 className="about-frameworks">Current Frameworks / Libraries / Technologies: </h5>
           <p className="about-framework-list">HTML  |  CSS  |  JavaScript <br /> React  |  VS Code
           </p>
-          <button className="resume-button">Coming Soon: Resum&eacute;</button>
+          <button className="resume-button"><a className="resume-link" href={pdf} target="_blank" rel="noreferrer">Resum&eacute;</a></button>
         </div>
       </div>
     </motion.div>
