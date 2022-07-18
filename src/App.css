@@ -451,7 +451,6 @@ h4 {
   width: 100%;
   max-width: 35rem;
   margin: 0 auto;
-  cursor: pointer;
 }
 
 .project-img:hover, .project-img:focus {
