@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import pdf from '../documents/WebDevResume.pdf';
 
 
@@ -7,12 +6,7 @@ import pdf from '../documents/WebDevResume.pdf';
 const About = () => {
 
   return (
-    <motion.div className="about-container" id="about"
-      initial={{ y: 200, opacity: 0 }}
-      whileInView={{ y:0, opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ ease: 'easeOut', duration: 1 }}
-    >
+    <div className="about-container" id="about"> 
       <h2>about</h2>
       <div className="about-content-container">
         <img className="about-img" src='images/margaretBritton.jpg' alt='Margaret Britton' />
@@ -36,7 +30,7 @@ const About = () => {
           <button className="resume-button"><a className="resume-link" href={pdf} target="_blank" rel="noreferrer">Resum&eacute;</a></button>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

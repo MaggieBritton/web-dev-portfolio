@@ -12,12 +12,7 @@ const Projects = () => {
   
     return (
     <div className="projects-container" id="projects">
-        <motion.h2
-        initial={{ y: 200, opacity: 0 }}
-        whileInView={{ y:0, opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ ease: 'easeOut', duration: 1 }}
-        >projects</motion.h2>
+        <h2>projects</h2>
         {projectsData.map((item, index) => {
             return (
                 <>
@@ -25,7 +20,7 @@ const Projects = () => {
                     initial={{ y: 200, opacity: 0 }}
                     whileInView={{ y:0, opacity: 1 }}
                     viewport={{ once: true }}
-                    transition={{ ease: 'easeOut', duration: 1 }}
+                    transition={{ ease: 'easeOut', duration: 1.5 }}
                     >
                         <div key={index} className="project-container" >
                             <h4>{item.title}</h4>
